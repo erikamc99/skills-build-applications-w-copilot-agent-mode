@@ -6,26 +6,25 @@ import Teams from './components/Teams';
 import Users from './components/Users';
 import Workouts from './components/Workouts';
 import './App.css';
-import logo from './logo.svg';
+
+const logo = '/octofitapp-small.png';
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <header className="App-header">
-          <div className="logo">
-            <img src={logo} alt="OctoFit Logo" />
-          </div>
-        </header>
         <div className="container">
           <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <div className="container-fluid">
-              <NavLink className="navbar-brand" to="/">OctoFit Tracker</NavLink>
+            <div className="container-fluid d-flex justify-content-between">
+              <div className="d-flex align-items-center">
+                <img src={logo} alt="OctoFit Logo" className="me-3" style={{ height: '40px', borderRadius: '50%' }} />
+                <NavLink className="navbar-brand" to="/">OctoFit Tracker</NavLink>
+              </div>
               <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
               </button>
               <div className="collapse navbar-collapse" id="navbarNav">
-                <ul className="navbar-nav">
+                <ul className="navbar-nav ms-auto">
                   <li className="nav-item">
                     <NavLink className="nav-link" to="/activities">Activities</NavLink>
                   </li>
